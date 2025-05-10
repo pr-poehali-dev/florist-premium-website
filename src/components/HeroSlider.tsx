@@ -124,14 +124,14 @@ const HeroSlider = () => {
 
       <button
         onClick={prevSlide}
-        className="absolute left-4 top-1/2 -translate-y-1/2 z-20 h-10 w-10 flex items-center justify-center rounded-full bg-white/20 backdrop-blur-sm text-white hover:bg-white/30 transition-all duration-300"
+        className="absolute left-4 top-1/2 -translate-y-1/2 z-20 h-10 w-10 hidden md:flex items-center justify-center rounded-full bg-white/20 backdrop-blur-sm text-white hover:bg-white/30 transition-all duration-300"
         aria-label="Previous slide"
       >
         <ChevronLeft size={20} />
       </button>
       <button
         onClick={nextSlide}
-        className="absolute right-4 top-1/2 -translate-y-1/2 z-20 h-10 w-10 flex items-center justify-center rounded-full bg-white/20 backdrop-blur-sm text-white hover:bg-white/30 transition-all duration-300"
+        className="absolute right-4 top-1/2 -translate-y-1/2 z-20 h-10 w-10 hidden md:flex items-center justify-center rounded-full bg-white/20 backdrop-blur-sm text-white hover:bg-white/30 transition-all duration-300"
         aria-label="Next slide"
       >
         <ChevronRight size={20} />
