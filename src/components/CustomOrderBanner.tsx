@@ -24,12 +24,12 @@ const CustomOrderBanner = () => {
   }, []);
 
   return (
-    <section className="py-16 relative overflow-hidden">
+    <section className="py-20 relative overflow-hidden">
       {/* Background */}
       <div
         className="absolute inset-0 z-0 transition-opacity duration-500"
         style={{
-          backgroundImage: `linear-gradient(rgba(47, 79, 79, 0.85), rgba(47, 79, 79, 0.85)), url(${bgLoaded ? bgImageUrl : fallbackImageUrl})`,
+          backgroundImage: `linear-gradient(rgba(85, 107, 47, 0.85), rgba(85, 107, 47, 0.85)), url(${bgLoaded ? bgImageUrl : fallbackImageUrl})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           opacity: bgLoaded ? 1 : 0.5,
@@ -38,26 +38,26 @@ const CustomOrderBanner = () => {
 
       {/* Placeholder background while loading */}
       {!bgLoaded && (
-        <div className="absolute inset-0 z-0 bg-forest-green/70"></div>
+        <div className="absolute inset-0 z-0 bg-olive-DEFAULT/70"></div>
       )}
 
       {/* Decorative Elements */}
-      <div className="absolute top-0 left-0 h-20 w-20 border-t-2 border-l-2 border-gold opacity-60"></div>
-      <div className="absolute bottom-0 right-0 h-20 w-20 border-b-2 border-r-2 border-gold opacity-60"></div>
+      <div className="absolute top-0 left-0 h-20 w-20 border-t-2 border-l-2 border-rose-light opacity-60"></div>
+      <div className="absolute bottom-0 right-0 h-20 w-20 border-b-2 border-r-2 border-rose-light opacity-60"></div>
 
       <div className="container relative z-10 mx-auto px-4 md:px-6">
         <div className="md:max-w-2xl">
           <h2 className="font-playfair text-3xl md:text-4xl lg:text-5xl text-white mb-6">
-            Уникальный букет для особенного случая
+            Создадим букет вашей мечты
           </h2>
 
           <p className="text-cream/90 text-lg mb-8">
-            Расскажите нам о своих пожеланиях, и мы создадим эксклюзивную
-            композицию, которая идеально подойдет для вашего события или станет
-            особенным подарком.
+            Расскажите нам о своей идее, и наши флористы воплотят её в жизнь.
+            Эксклюзивная композиция для особенного случая или уникальный
+            подарок, передающий ваши чувства.
           </p>
 
-          <Button className="bg-cream text-forest-green hover:bg-white group">
+          <Button className="bg-rose-light text-olive-dark hover:bg-white group">
             <span>Заказать индивидуальный букет</span>
             <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
           </Button>

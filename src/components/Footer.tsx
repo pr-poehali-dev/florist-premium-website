@@ -4,14 +4,13 @@ import { Instagram, Facebook, MapPin, Phone, Mail } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="bg-forest-green text-white">
+    <footer className="bg-olive-dark text-white">
       <div className="container mx-auto px-4 md:px-6 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* Brand */}
           <div>
             <h2 className="text-2xl font-playfair mb-4">
               Оливия
-              <span className="text-secondary text-sm align-top">букеты</span>
+              <span className="text-rose-light text-sm align-top">букеты</span>
             </h2>
             <p className="text-white/80 mb-6">
               Создаем изысканные букеты и композиции для украшения вашей жизни и
@@ -22,7 +21,7 @@ const Footer = () => {
                 href="https://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="h-10 w-10 flex items-center justify-center rounded-full border border-white/30 hover:border-secondary hover:text-secondary transition-colors duration-300"
+                className="h-10 w-10 flex items-center justify-center rounded-full border border-white/30 hover:border-rose-light hover:text-rose-light transition-colors duration-300"
               >
                 <Instagram size={18} />
               </a>
@@ -30,7 +29,7 @@ const Footer = () => {
                 href="https://facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="h-10 w-10 flex items-center justify-center rounded-full border border-white/30 hover:border-secondary hover:text-secondary transition-colors duration-300"
+                className="h-10 w-10 flex items-center justify-center rounded-full border border-white/30 hover:border-rose-light hover:text-rose-light transition-colors duration-300"
               >
                 <Facebook size={18} />
               </a>

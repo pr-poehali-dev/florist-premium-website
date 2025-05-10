@@ -1,3 +1,4 @@
+
 import React from "react";
 import Navbar from "@/components/Navbar";
 import HeroSlider from "@/components/HeroSlider";
@@ -12,11 +13,11 @@ const Index = () => {
       <Navbar />
       <main className="flex-grow">
         <HeroSlider />
-        <div className="py-12"></div> {/* Дополнительное пространство */}
+        <div className="py-16 bg-gradient-to-b from-cream/10 to-cream"></div>
         <BestSellers />
-        <div className="py-12"></div> {/* Дополнительное пространство */}
+        <div className="py-16 bg-gradient-to-b from-cream to-background"></div>
         <AboutSection />
-        <div className="py-12"></div> {/* Дополнительное пространство */}
+        <div className="py-16"></div>
         <CustomOrderBanner />
       </main>
       <Footer />

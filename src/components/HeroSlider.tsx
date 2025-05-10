@@ -106,7 +106,7 @@ const HeroSlider = () => {
                 {item.description}
               </p>
               <Button
-                className="bg-cream text-forest-green hover:bg-cream/90 border border-gold/20 animate-slideUp"
+                className="bg-rose-light text-olive-dark hover:bg-rose-light/90 border border-white/20 animate-slideUp"
                 style={{ animationDelay: "0.2s" }}
               >
                 {item.btnText}

@@ -39,13 +39,13 @@ const Navbar = () => {
           <Link to="/" className="z-10">
             <h1
               className={`text-2xl md:text-3xl font-playfair font-semibold ${
-                isScrolled ? "text-primary" : "text-white"
+                isScrolled ? "text-olive-dark" : "text-white"
               }`}
             >
               Оливия
               <span
                 className={`${
-                  isScrolled ? "text-accent" : "text-secondary"
+                  isScrolled ? "text-rose-DEFAULT" : "text-rose-light"
                 } text-sm align-top`}
               >
                 букеты
@@ -59,7 +59,7 @@ const Navbar = () => {
                 key={link.title}
                 to={link.href}
                 className={`font-medium ${
-                  isScrolled ? "text-forest-green" : "text-white"
+                  isScrolled ? "text-olive-DEFAULT" : "text-white"
                 } fancy-link`}
               >
                 {link.title}
@@ -71,7 +71,7 @@ const Navbar = () => {
             <Button
               variant="ghost"
               size="icon"
-              className={isScrolled ? "text-forest-green" : "text-white"}
+              className={isScrolled ? "text-olive-DEFAULT" : "text-white"}
             >
               <Search size={20} />
             </Button>
@@ -79,18 +79,18 @@ const Navbar = () => {
               variant="ghost"
               size="icon"
               className={`${
-                isScrolled ? "text-forest-green" : "text-white"
+                isScrolled ? "text-olive-DEFAULT" : "text-white"
               } relative`}
             >
               <ShoppingBag size={20} />
-              <span className="absolute -top-1 -right-1 h-5 w-5 flex items-center justify-center text-xs bg-burgundy text-white rounded-full">
+              <span className="absolute -top-1 -right-1 h-5 w-5 flex items-center justify-center text-xs bg-rose-dark text-white rounded-full">
                 0
               </span>
             </Button>
             <Button
               className={
                 isScrolled
-                  ? "bg-forest-green hover:bg-forest-green/90 text-white"
+                  ? "bg-olive-DEFAULT hover:bg-olive-dark text-white"
                   : "bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white border border-white/30"
               }
             >

@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -13,16 +14,16 @@
     --popover: 0 0% 100%;
     --popover-foreground: 60 15% 10%;
 
-    --primary: 80 30% 35%; /* Оливковый оттенок */
+    --primary: 80 30% 35%; /* Оливковый цвет */
     --primary-foreground: 60 9.1% 97.8%;
 
-    --secondary: 350 40% 90%; /* Светло-розовый оттенок */
+    --secondary: 350 60% 90%; /* Нежно-розовый */
     --secondary-foreground: 350 50% 20%;
 
     --muted: 60 4.8% 95.9%;
     --muted-foreground: 25 5.3% 44.7%;
 
-    --accent: 350 65% 35%; /* Насыщенный розовый */
+    --accent: 350 65% 55%; /* Яркий розовый */
     --accent-foreground: 0 0% 98%;
 
     --destructive: 0 84.2% 60.2%;
@@ -48,13 +49,13 @@
     --primary: 80 25% 30%; /* Темный оливковый */
     --primary-foreground: 60 9.1% 97.8%;
 
-    --secondary: 350 30% 25%; /* Темно-розовый */
+    --secondary: 350 30% 40%; /* Насыщенный розовый */
     --secondary-foreground: 60 9.1% 97.8%;
 
     --muted: 12 6.5% 15.1%;
     --muted-foreground: 24 5.4% 63.9%;
 
-    --accent: 350 40% 35%;
+    --accent: 350 40% 50%;
     --accent-foreground: 60 9.1% 97.8%;
 
     --destructive: 0 62.8% 30.6%;
@@ -97,7 +98,19 @@
     @apply transition-transform duration-200 hover:scale-105;
   }
 
-  .golden-border {
+  .olive-gradient {
+    @apply bg-gradient-to-r from-primary/80 to-primary;
+  }
+  
+  .pink-gradient {
+    @apply bg-gradient-to-r from-secondary/80 to-accent/80;
+  }
+  
+  .olive-border {
     @apply border border-primary/40;
+  }
+  
+  .pink-border {
+    @apply border border-accent/30;
   }
 }

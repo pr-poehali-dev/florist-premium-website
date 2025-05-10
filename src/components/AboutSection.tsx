@@ -20,9 +20,9 @@ const AboutSection = () => {
     "https://images.unsplash.com/photo-1563241527-3004b7be0ffd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80";
 
   return (
-    <section className="py-16 overflow-hidden">
+    <section className="py-20 overflow-hidden">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
           {/* Image Side */}
           <div className="relative">
             <div className="aspect-[4/5] relative z-10">
@@ -37,19 +37,20 @@ const AboutSection = () => {
                 onError={handleImageError}
               />
             </div>
-            <div className="absolute top-8 -right-4 w-24 h-24 md:w-32 md:h-32 border border-gold rounded-full z-0"></div>
-            <div className="absolute -bottom-4 -left-4 w-32 h-32 md:w-40 md:h-40 border border-gold rounded-full z-0"></div>
+            <div className="absolute top-8 -right-4 w-24 h-24 md:w-32 md:h-32 border border-olive-light rounded-full z-0"></div>
+            <div className="absolute -bottom-4 -left-4 w-32 h-32 md:w-40 md:h-40 border border-rose-light rounded-full z-0"></div>
           </div>
 
           {/* Text Side */}
           <div className="md:pl-8">
-            <div className="inline-flex items-center gap-2 bg-secondary px-4 py-1.5 rounded-full text-primary text-sm font-medium mb-6">
-              <Sparkles size={16} className="text-accent" />
+            <div className="inline-flex items-center gap-2 bg-rose-light/60 px-4 py-1.5 rounded-full text-olive-dark text-sm font-medium mb-6">
+              <Sparkles size={16} className="text-rose-dark" />
               <span>Наша цветочная история</span>
             </div>
 
-            <h2 className="font-playfair text-3xl md:text-4xl text-primary mb-6 leading-tight">
-              Искусство и природа <br />в каждом букете
+            <h2 className="font-playfair text-3xl md:text-4xl text-olive-dark mb-6 leading-tight">
+              Каждый букет — история <br />
+              чувств и эмоций
             </h2>
 
             <div className="prose prose-primary max-w-none mb-8">

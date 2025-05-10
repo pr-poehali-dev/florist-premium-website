@@ -102,20 +102,20 @@ const ProductCard: React.FC<ProductCardProps> = ({
 
 const BestSellers = () => {
   return (
-    <section className="py-16 bg-cream/30">
+    <section className="py-16 bg-cream">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex justify-between items-end mb-10">
           <div>
-            <h2 className="font-playfair text-3xl md:text-4xl text-forest-green mb-2">
-              Хиты продаж
+            <h2 className="font-playfair text-3xl md:text-4xl text-olive-dark mb-2">
+              Наши хиты сезона
             </h2>
             <p className="text-muted-foreground">
-              Самые популярные букеты этого сезона
+              Самые популярные букеты, созданные с любовью
             </p>
           </div>
           <Button
             variant="link"
-            className="text-burgundy font-medium fancy-link"
+            className="text-rose-dark font-medium fancy-link"
           >
             Смотреть все
           </Button>
