@@ -1,13 +1,16 @@
-
-import { type Config } from "tailwindcss";
+import { defineConfig } from "tailwindcss";
 import { fontFamily } from "tailwindcss/defaultTheme";
+import tailwindcssAnimate from "tailwindcss-animate";
 
-export default {
+const config = defineConfig({
   darkMode: ["class"],
   content: [
-    './index.html',
-    './src/**/*.{js,ts,jsx,tsx}',
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
   ],
+  prefix: "",
   theme: {
     container: {
       center: true,
@@ -17,20 +20,16 @@ export default {
       },
     },
     extend: {
-      fontFamily: {
-        sans: ["Lora", ...fontFamily.sans],
-        playfair: ["Playfair Display", "serif"],
-      },
       colors: {
+        "forest-green": "#2F4F4F",
+        burgundy: "#800020",
+        gold: "#D4AF37",
+        cream: "#F8F4E3",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
-        cream: "#F8F4E3",
-        'forest-green': "#2F4F4F",
-        burgundy: "#800020",
-        gold: "#D4AF37",
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
@@ -65,6 +64,10 @@ export default {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+      fontFamily: {
+        sans: ["Lora", "sans-serif", ...fontFamily.sans],
+        playfair: ["Playfair Display", "serif"],
+      },
       keyframes: {
         "accordion-down": {
           from: { height: "0" },
@@ -75,21 +78,41 @@ export default {
           to: { height: "0" },
         },
         fadeIn: {
-          '0%': { opacity: '0' },
-          '100%': { opacity: '1' },
+          "0%": { opacity: "0" },
+          "100%": { opacity: "1" },
         },
         slideUp: {
-          '0%': { transform: 'translateY(10px)', opacity: '0' },
-          '100%': { transform: 'translateY(0)', opacity: '1' },
+          "0%": { transform: "translateY(20px)", opacity: "0" },
+          "100%": { transform: "translateY(0)", opacity: "1" },
         },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        fadeIn: 'fadeIn 0.5s ease-in-out',
-        slideUp: 'slideUp 0.6s ease-out',
+        fadeIn: "fadeIn 0.5s ease-out",
+        slideUp: "slideUp 0.5s ease-out forwards",
       },
+      typography: (theme: any) => ({
+        DEFAULT: {
+          css: {
+            color: theme("colors.forest-green"),
+            a: {
+              color: theme("colors.burgundy"),
+              "&:hover": {
+                color: theme("colors.burgundy"),
+                textDecoration: "underline",
+              },
+            },
+            "h1, h2, h3, h4, h5, h6": {
+              color: theme("colors.forest-green"),
+              fontFamily: theme("fontFamily.playfair"),
+            },
+          },
+        },
+      }),
     },
   },
-  plugins: [require("tailwindcss-animate"), require('@tailwindcss/typography')],
-} satisfies Config;
+  plugins: [tailwindcssAnimate, require("@tailwindcss/typography")],
+});
+
+export default config;

@@ -1,35 +1,64 @@
-
-import React, { useState, useEffect } from 'react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import React, { useState, useEffect } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const sliderItems = [
   {
     id: 1,
-    title: 'Осенняя симфония',
-    description: 'Яркие краски осени в изысканных сочетаниях',
-    image: 'https://images.unsplash.com/photo-1508610048659-a06b669e3321?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-    btnText: 'Выбрать букет',
+    title: "Осенняя симфония",
+    description: "Яркие краски осени в изысканных сочетаниях",
+    image:
+      "https://images.unsplash.com/photo-1508610048659-a06b669e3321?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+    btnText: "Выбрать букет",
   },
   {
     id: 2,
-    title: 'Пастельные мечты',
-    description: 'Нежные оттенки для создания романтичного настроения',
-    image: 'https://images.unsplash.com/photo-1561181286-d5c92b599ba4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-    btnText: 'Смотреть коллекцию',
+    title: "Пастельные мечты",
+    description: "Нежные оттенки для создания романтичного настроения",
+    image:
+      "https://images.unsplash.com/photo-1561181286-d5c92b599ba4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+    btnText: "Смотреть коллекцию",
   },
   {
     id: 3,
-    title: 'Тропические акценты',
-    description: 'Экзотические композиции для особенных моментов',
-    image: 'https://images.unsplash.com/photo-1501004318641-b39e6451bec6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2073&q=80',
-    btnText: 'Открыть для себя',
+    title: "Тропические акценты",
+    description: "Экзотические композиции для особенных моментов",
+    image:
+      "https://images.unsplash.com/photo-1501004318641-b39e6451bec6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2073&q=80",
+    btnText: "Открыть для себя",
   },
 ];
 
 const HeroSlider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
+  const [imagesLoaded, setImagesLoaded] = useState<Record<number, boolean>>({});
+
+  // Предзагрузка изображений
+  useEffect(() => {
+    const loadImages = async () => {
+      const promises = sliderItems.map((item) => {
+        return new Promise<number>((resolve) => {
+          const img = new Image();
+          img.src = item.image;
+          img.onload = () => resolve(item.id);
+        });
+      });
+
+      const results = await Promise.all(promises);
+      const loadedMap = results.reduce(
+        (acc, id) => {
+          acc[id] = true;
+          return acc;
+        },
+        {} as Record<number, boolean>,
+      );
+
+      setImagesLoaded(loadedMap);
+    };
+
+    loadImages();
+  }, []);
 
   const nextSlide = () => {
     if (isAnimating) return;
@@ -58,12 +87,12 @@ const HeroSlider = () => {
         <div
           key={item.id}
           className={`absolute inset-0 flex items-center transition-opacity duration-1000 ${
-            index === currentSlide ? 'opacity-100 z-10' : 'opacity-0 z-0'
+            index === currentSlide ? "opacity-100 z-10" : "opacity-0 z-0"
           }`}
           style={{
             backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(${item.image})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
+            backgroundSize: "cover",
+            backgroundPosition: "center",
           }}
         >
           <div className="container mx-auto px-4 md:px-6">
@@ -71,12 +100,15 @@ const HeroSlider = () => {
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-playfair font-bold mb-4 animate-slideUp">
                 {item.title}
               </h2>
-              <p className="text-lg md:text-xl mb-6 animate-slideUp" style={{ animationDelay: '0.1s' }}>
+              <p
+                className="text-lg md:text-xl mb-6 animate-slideUp"
+                style={{ animationDelay: "0.1s" }}
+              >
                 {item.description}
               </p>
-              <Button 
+              <Button
                 className="bg-cream text-forest-green hover:bg-cream/90 border border-gold/20 animate-slideUp"
-                style={{ animationDelay: '0.2s' }}
+                style={{ animationDelay: "0.2s" }}
               >
                 {item.btnText}
               </Button>
@@ -84,6 +116,13 @@ const HeroSlider = () => {
           </div>
         </div>
       ))}
+
+      {/* Fallback Image while loading */}
+      {!Object.keys(imagesLoaded).length && (
+        <div className="absolute inset-0 flex items-center justify-center bg-forest-green/20">
+          <div className="animate-pulse w-16 h-16 rounded-full bg-gold/30" />
+        </div>
+      )}
 
       {/* Navigation Arrows */}
       <button
@@ -108,9 +147,9 @@ const HeroSlider = () => {
             key={index}
             onClick={() => setCurrentSlide(index)}
             className={`h-1.5 rounded-full transition-all duration-300 ${
-              index === currentSlide 
-                ? 'w-10 bg-white' 
-                : 'w-4 bg-white/60 hover:bg-white/80'
+              index === currentSlide
+                ? "w-10 bg-white"
+                : "w-4 bg-white/60 hover:bg-white/80"
             }`}
             aria-label={`Go to slide ${index + 1}`}
           />
