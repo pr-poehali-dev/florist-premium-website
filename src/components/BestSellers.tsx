@@ -15,18 +15,18 @@ interface ProductCardProps {
 const products: ProductCardProps[] = [
   {
     id: 1,
-    name: "Оливковый бриз",
+    name: "Любовные розы",
     price: 5900,
     image:
-      "https://images.unsplash.com/photo-1562690868-60bbe7293e94?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80",
-    composition: "Розы, эвкалипт, оливковые ветви",
+      "https://cdn.poehali.dev/files/f95d937b-6867-4772-a586-dc44f1a07415.png",
+    composition: "Розы, пионы, эвкалипт",
   },
   {
     id: 2,
     name: "Розовое облако",
     price: 4700,
     image:
-      "https://images.unsplash.com/photo-1591886960571-74d43a9d4166?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80",
+      "https://cdn.poehali.dev/files/c55bf421-fbdb-4da5-baff-939f01211404.png",
     composition: "Пионы, розы, гипсофила",
   },
   {
@@ -34,7 +34,7 @@ const products: ProductCardProps[] = [
     name: "Нежный рассвет",
     price: 6200,
     image:
-      "https://images.unsplash.com/photo-1561848955-6d18f3359d0d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80",
+      "https://cdn.poehali.dev/files/7b13b4c5-eee3-4e93-ae0a-a2bd7a57d22e.png",
     composition: "Ранункулюсы, розы, эвкалипт",
   },
   {
