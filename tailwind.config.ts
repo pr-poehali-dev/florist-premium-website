@@ -1,16 +1,15 @@
-import { defineConfig } from "tailwindcss";
-import { fontFamily } from "tailwindcss/defaultTheme";
-import tailwindcssAnimate from "tailwindcss-animate";
 
-const config = defineConfig({
+import type { Config } from "tailwindcss";
+import { fontFamily } from "tailwindcss/defaultTheme";
+
+export default {
   darkMode: ["class"],
   content: [
-    "./pages/**/*.{ts,tsx}",
-    "./components/**/*.{ts,tsx}",
-    "./app/**/*.{ts,tsx}",
-    "./src/**/*.{ts,tsx}",
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
-  prefix: "",
   theme: {
     container: {
       center: true,
@@ -65,8 +64,9 @@ const config = defineConfig({
         sm: "calc(var(--radius) - 4px)",
       },
       fontFamily: {
-        sans: ["Lora", "sans-serif", ...fontFamily.sans],
         playfair: ["Playfair Display", "serif"],
+        lora: ["Lora", "serif"],
+        sans: ["var(--font-sans)", ...fontFamily.sans],
       },
       keyframes: {
         "accordion-down": {
@@ -89,30 +89,10 @@ const config = defineConfig({
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        fadeIn: "fadeIn 0.5s ease-out",
+        fadeIn: "fadeIn 0.5s ease-in-out",
         slideUp: "slideUp 0.5s ease-out forwards",
       },
-      typography: (theme: any) => ({
-        DEFAULT: {
-          css: {
-            color: theme("colors.forest-green"),
-            a: {
-              color: theme("colors.burgundy"),
-              "&:hover": {
-                color: theme("colors.burgundy"),
-                textDecoration: "underline",
-              },
-            },
-            "h1, h2, h3, h4, h5, h6": {
-              color: theme("colors.forest-green"),
-              fontFamily: theme("fontFamily.playfair"),
-            },
-          },
-        },
-      }),
     },
   },
-  plugins: [tailwindcssAnimate, require("@tailwindcss/typography")],
-});
-
-export default config;
+  plugins: [require("tailwindcss-animate")],
+} satisfies Config;
