@@ -137,7 +137,7 @@ const HeroSlider = () => {
         <ChevronRight size={20} />
       </button>
 
-      <div className="absolute bottom-6 left-0 right-0 z-20 flex justify-center space-x-2 sm:bottom-6">
+      <div className="absolute bottom-6 left-0 right-0 z-20 hidden md:flex justify-center space-x-2">
         {sliderItems.map((_, index) => (
           <button
             key={index}
