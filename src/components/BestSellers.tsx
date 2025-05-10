@@ -26,7 +26,7 @@ const products: ProductCardProps[] = [
     name: "Розовое облако",
     price: 4700,
     image:
-      "https://cdn.poehali.dev/files/f95d937b-6867-4772-a586-dc44f1a07415.png",
+      "https://cdn.poehali.dev/files/6b4286e3-e676-4718-b2d8-05d95e729e16.png",
     composition: "Пионы, розы, гипсофила",
   },
   {
