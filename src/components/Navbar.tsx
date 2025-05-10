@@ -53,7 +53,7 @@ const Navbar = () => {
             </h1>
           </Link>
 
-          <nav className="hidden md:flex items-center space-x-6">
+          <nav className="hidden lg:flex items-center space-x-6">
             {navLinks.map((link) => (
               <Link
                 key={link.title}
@@ -67,7 +67,7 @@ const Navbar = () => {
             ))}
           </nav>
 
-          <div className="hidden md:flex items-center space-x-4">
+          <div className="hidden lg:flex items-center space-x-4">
             <Button
               variant="ghost"
               size="icon"
@@ -98,7 +98,39 @@ const Navbar = () => {
             </Button>
           </div>
 
-          <div className="flex items-center space-x-4 md:hidden">
+          {/* Планшетная версия - отображаем только иконки */}
+          <div className="hidden md:flex lg:hidden items-center space-x-4">
+            <Button
+              variant="ghost"
+              size="icon"
+              className={isScrolled ? "text-olive-DEFAULT" : "text-white"}
+            >
+              <Search size={20} />
+            </Button>
+            <Button
+              variant="ghost"
+              size="icon"
+              className={`${
+                isScrolled ? "text-olive-DEFAULT" : "text-white"
+              } relative`}
+            >
+              <ShoppingBag size={20} />
+              <span className="absolute -top-1 -right-1 h-5 w-5 flex items-center justify-center text-xs bg-rose-dark text-white rounded-full">
+                0
+              </span>
+            </Button>
+            <Button
+              variant="ghost"
+              size="icon"
+              className={isScrolled ? "text-olive-DEFAULT" : "text-white"}
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+            >
+              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </Button>
+          </div>
+
+          {/* Мобильная версия */}
+          <div className="flex md:hidden items-center space-x-4">
             <Button
               variant="ghost"
               size="icon"
@@ -119,7 +151,7 @@ const Navbar = () => {
       </div>
 
       {isMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 right-0 bg-white shadow-md py-4 animate-fadeIn">
+        <div className="lg:hidden absolute top-full left-0 right-0 bg-white shadow-md py-4 animate-fadeIn">
           <nav className="container mx-auto px-4 flex flex-col space-y-4">
             {navLinks.map((link) => (
               <Link
