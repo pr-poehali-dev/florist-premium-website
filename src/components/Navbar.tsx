@@ -42,13 +42,13 @@ const Navbar = () => {
                 isScrolled ? "text-olive-dark" : "text-white"
               }`}
             >
-              Оливия
+              Флора Премиум
               <span
                 className={`${
                   isScrolled ? "text-rose-DEFAULT" : "text-rose-light"
                 } text-sm align-top`}
               >
-                букеты
+                студия
               </span>
             </h1>
           </Link>

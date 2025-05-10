@@ -9,8 +9,8 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
             <h2 className="text-2xl font-playfair mb-4">
-              Оливия
-              <span className="text-rose-light text-sm align-top">букеты</span>
+              Флора Премиум
+              <span className="text-rose-light text-sm align-top">студия</span>
             </h2>
             <p className="text-white/80 mb-6">
               Создаем изысканные букеты и композиции для украшения вашей жизни и
