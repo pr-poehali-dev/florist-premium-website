@@ -18,7 +18,7 @@ const products: ProductCardProps[] = [
     name: "Нежные чувства",
     price: 5900,
     image:
-      "https://images.unsplash.com/photo-1556807484-701064e51f58?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      "https://images.unsplash.com/photo-1562690868-60bbe7293e94?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80",
     composition: "Пионы, розы, эвкалипт",
   },
   {
@@ -26,7 +26,7 @@ const products: ProductCardProps[] = [
     name: "Яркие моменты",
     price: 4500,
     image:
-      "https://images.unsplash.com/photo-1527061011008-eaf1f9ca2776?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2076&q=80",
+      "https://images.unsplash.com/photo-1591886960571-74d43a9d4166?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80",
     composition: "Тюльпаны, ранункулюсы, гипсофила",
   },
   {
@@ -34,7 +34,7 @@ const products: ProductCardProps[] = [
     name: "Элегантный вечер",
     price: 7200,
     image:
-      "https://images.unsplash.com/photo-1554829489-cef48ef3e420?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      "https://images.unsplash.com/photo-1606716879922-8a88c48b29fb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80",
     composition: "Розы, лилии, хризантемы",
   },
   {
@@ -42,7 +42,7 @@ const products: ProductCardProps[] = [
     name: "Летнее настроение",
     price: 3900,
     image:
-      "https://images.unsplash.com/photo-1526047932273-341f2a7631f9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2080&q=80",
+      "https://images.unsplash.com/photo-1525310072745-f49212b5ac6d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1965&q=80",
     composition: "Подсолнухи, ромашки, зелень",
   },
 ];
