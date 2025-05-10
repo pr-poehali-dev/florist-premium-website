@@ -15,35 +15,35 @@ interface ProductCardProps {
 const products: ProductCardProps[] = [
   {
     id: 1,
-    name: "Нежные чувства",
+    name: "Оливковый бриз",
     price: 5900,
     image:
       "https://images.unsplash.com/photo-1562690868-60bbe7293e94?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80",
-    composition: "Пионы, розы, эвкалипт",
+    composition: "Розы, эвкалипт, оливковые ветви",
   },
   {
     id: 2,
-    name: "Яркие моменты",
-    price: 4500,
+    name: "Розовое облако",
+    price: 4700,
     image:
       "https://images.unsplash.com/photo-1591886960571-74d43a9d4166?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80",
-    composition: "Тюльпаны, ранункулюсы, гипсофила",
+    composition: "Пионы, розы, гипсофила",
   },
   {
     id: 3,
-    name: "Элегантный вечер",
-    price: 7200,
+    name: "Нежный рассвет",
+    price: 6200,
     image:
-      "https://images.unsplash.com/photo-1501577316686-a5cbf6c1df7e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80",
-    composition: "Розы, лилии, хризантемы",
+      "https://images.unsplash.com/photo-1561848955-6d18f3359d0d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80",
+    composition: "Ранункулюсы, розы, эвкалипт",
   },
   {
     id: 4,
-    name: "Летнее настроение",
-    price: 3900,
+    name: "Весенний шепот",
+    price: 4200,
     image:
       "https://images.unsplash.com/photo-1525310072745-f49212b5ac6d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1965&q=80",
-    composition: "Подсолнухи, ромашки, зелень",
+    composition: "Тюльпаны, нарциссы, вербена",
   },
 ];
 

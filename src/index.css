@@ -1,61 +1,60 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --background: 36 33% 97%;
-    --foreground: 20 14.3% 4.1%;
+    --background: 60 30% 97%;
+    --foreground: 60 15% 10%;
 
     --card: 0 0% 100%;
-    --card-foreground: 20 14.3% 4.1%;
+    --card-foreground: 60 15% 10%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 20 14.3% 4.1%;
+    --popover-foreground: 60 15% 10%;
 
-    --primary: 160 25% 25%;
+    --primary: 80 30% 35%; /* Оливковый оттенок */
     --primary-foreground: 60 9.1% 97.8%;
 
-    --secondary: 20 6% 90%;
-    --secondary-foreground: 24 9.8% 10%;
+    --secondary: 350 40% 90%; /* Светло-розовый оттенок */
+    --secondary-foreground: 350 50% 20%;
 
     --muted: 60 4.8% 95.9%;
     --muted-foreground: 25 5.3% 44.7%;
 
-    --accent: 340 45% 25%;
+    --accent: 350 65% 35%; /* Насыщенный розовый */
     --accent-foreground: 0 0% 98%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 60 9.1% 97.8%;
 
-    --border: 20 5.9% 90%;
-    --input: 20 5.9% 90%;
-    --ring: 28 58.8% 40.6%;
+    --border: 60 6% 90%;
+    --input: 60 6% 90%;
+    --ring: 80 30% 35%;
 
     --radius: 0.5rem;
   }
 
   .dark {
-    --background: 20 14.3% 4.1%;
+    --background: 60 15% 10%;
     --foreground: 60 9.1% 97.8%;
 
-    --card: 20 14.3% 4.1%;
+    --card: 60 15% 10%;
     --card-foreground: 60 9.1% 97.8%;
 
-    --popover: 20 14.3% 4.1%;
+    --popover: 60 15% 10%;
     --popover-foreground: 60 9.1% 97.8%;
 
-    --primary: 160 30% 35%;
+    --primary: 80 25% 30%; /* Темный оливковый */
     --primary-foreground: 60 9.1% 97.8%;
 
-    --secondary: 12 6.5% 15.1%;
+    --secondary: 350 30% 25%; /* Темно-розовый */
     --secondary-foreground: 60 9.1% 97.8%;
 
     --muted: 12 6.5% 15.1%;
     --muted-foreground: 24 5.4% 63.9%;
 
-    --accent: 340 40% 30%;
+    --accent: 350 40% 35%;
     --accent-foreground: 60 9.1% 97.8%;
 
     --destructive: 0 62.8% 30.6%;
@@ -71,27 +70,34 @@
   * {
     @apply border-border;
   }
-  
+
   body {
     @apply bg-background text-foreground;
-    font-feature-settings: "rlig" 1, "calt" 1;
+    font-feature-settings:
+      "rlig" 1,
+      "calt" 1;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-playfair;
   }
 }
 
 @layer components {
   .fancy-link {
-    @apply relative inline-block after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-gold after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left;
+    @apply relative inline-block after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-accent after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left;
   }
-  
+
   .hover-scale {
     @apply transition-transform duration-200 hover:scale-105;
   }
-  
+
   .golden-border {
-    @apply border border-gold/40;
+    @apply border border-primary/40;
   }
 }

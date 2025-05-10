@@ -43,26 +43,26 @@ const AboutSection = () => {
 
           {/* Text Side */}
           <div className="md:pl-8">
-            <div className="inline-flex items-center gap-2 bg-cream px-4 py-1.5 rounded-full text-forest-green text-sm font-medium mb-6">
-              <Sparkles size={16} className="text-gold" />
-              <span>О нашей мастерской</span>
+            <div className="inline-flex items-center gap-2 bg-secondary px-4 py-1.5 rounded-full text-primary text-sm font-medium mb-6">
+              <Sparkles size={16} className="text-accent" />
+              <span>Наша цветочная история</span>
             </div>
 
-            <h2 className="font-playfair text-3xl md:text-4xl text-forest-green mb-6 leading-tight">
-              Создаём эмоции, <br />а не просто букеты
+            <h2 className="font-playfair text-3xl md:text-4xl text-primary mb-6 leading-tight">
+              Искусство и природа <br />в каждом букете
             </h2>
 
-            <div className="prose prose-forest-green max-w-none mb-8">
+            <div className="prose prose-primary max-w-none mb-8">
               <p>
-                В "Флоре" мы верим, что каждый букет — это история. Наша команда
-                опытных флористов вкладывает душу в каждую композицию, тщательно
-                подбирая сочетания цветов и текстур.
+                В "Оливии" мы верим, что цветы говорят на языке чувств. Наши
+                флористы с душой подходят к созданию каждой композиции,
+                тщательно подбирая оттенки и формы цветов для передачи нужного
+                настроения.
               </p>
               <p>
-                Мы создаем не просто красивые букеты, а настоящие произведения
-                флористического искусства, которые передают эмоции и чувства
-                лучше любых слов. Каждый цветок в наших композициях — это нота в
-                прекрасной симфонии чувств.
+                Мы работаем только с свежими сезонными цветами, чтобы каждый
+                букет радовал вас как можно дольше. Каждая композиция становится
+                особенным посланием, которое говорит больше, чем слова.
               </p>
             </div>
 

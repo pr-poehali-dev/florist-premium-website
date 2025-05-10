@@ -39,16 +39,16 @@ const Navbar = () => {
           <Link to="/" className="z-10">
             <h1
               className={`text-2xl md:text-3xl font-playfair font-semibold ${
-                isScrolled ? "text-forest-green" : "text-white"
+                isScrolled ? "text-primary" : "text-white"
               }`}
             >
-              Флора
+              Оливия
               <span
                 className={`${
-                  isScrolled ? "text-gold" : "text-cream"
+                  isScrolled ? "text-accent" : "text-secondary"
                 } text-sm align-top`}
               >
-                премиум
+                букеты
               </span>
             </h1>
           </Link>

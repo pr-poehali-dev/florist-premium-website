@@ -1,11 +1,10 @@
-
-import React from 'react';
-import Navbar from '@/components/Navbar';
-import HeroSlider from '@/components/HeroSlider';
-import BestSellers from '@/components/BestSellers';
-import AboutSection from '@/components/AboutSection';
-import CustomOrderBanner from '@/components/CustomOrderBanner';
-import Footer from '@/components/Footer';
+import React from "react";
+import Navbar from "@/components/Navbar";
+import HeroSlider from "@/components/HeroSlider";
+import BestSellers from "@/components/BestSellers";
+import AboutSection from "@/components/AboutSection";
+import CustomOrderBanner from "@/components/CustomOrderBanner";
+import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
@@ -13,8 +12,11 @@ const Index = () => {
       <Navbar />
       <main className="flex-grow">
         <HeroSlider />
+        <div className="py-12"></div> {/* Дополнительное пространство */}
         <BestSellers />
+        <div className="py-12"></div> {/* Дополнительное пространство */}
         <AboutSection />
+        <div className="py-12"></div> {/* Дополнительное пространство */}
         <CustomOrderBanner />
       </main>
       <Footer />

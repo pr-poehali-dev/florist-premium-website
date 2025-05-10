@@ -10,19 +10,19 @@ const Footer = () => {
           {/* Brand */}
           <div>
             <h2 className="text-2xl font-playfair mb-4">
-              Флора
-              <span className="text-gold text-sm align-top">премиум</span>
+              Оливия
+              <span className="text-secondary text-sm align-top">букеты</span>
             </h2>
             <p className="text-white/80 mb-6">
-              Создаем уникальные флористические композиции для особенных
-              моментов вашей жизни.
+              Создаем изысканные букеты и композиции для украшения вашей жизни и
+              передачи ваших чувств на языке цветов.
             </p>
             <div className="flex space-x-4">
               <a
                 href="https://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="h-10 w-10 flex items-center justify-center rounded-full border border-white/30 hover:border-gold hover:text-gold transition-colors duration-300"
+                className="h-10 w-10 flex items-center justify-center rounded-full border border-white/30 hover:border-secondary hover:text-secondary transition-colors duration-300"
               >
                 <Instagram size={18} />
               </a>
@@ -30,7 +30,7 @@ const Footer = () => {
                 href="https://facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="h-10 w-10 flex items-center justify-center rounded-full border border-white/30 hover:border-gold hover:text-gold transition-colors duration-300"
+                className="h-10 w-10 flex items-center justify-center rounded-full border border-white/30 hover:border-secondary hover:text-secondary transition-colors duration-300"
               >
                 <Facebook size={18} />
               </a>

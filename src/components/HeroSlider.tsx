@@ -5,27 +5,27 @@ import { Button } from "@/components/ui/button";
 const sliderItems = [
   {
     id: 1,
-    title: "Осенняя симфония",
-    description: "Яркие краски осени в изысканных сочетаниях",
+    title: "Волшебные композиции",
+    description: "Уникальные букеты, созданные с любовью и вдохновением",
     image:
       "https://images.unsplash.com/photo-1508610048659-a06b669e3321?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
     btnText: "Выбрать букет",
   },
   {
     id: 2,
-    title: "Пастельные мечты",
-    description: "Нежные оттенки для создания романтичного настроения",
+    title: "Нежные оттенки",
+    description: "Изысканные сочетания для создания особенного настроения",
     image:
       "https://images.unsplash.com/photo-1561181286-d5c92b599ba4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-    btnText: "Смотреть коллекцию",
+    btnText: "Открыть коллекцию",
   },
   {
     id: 3,
-    title: "Тропические акценты",
-    description: "Экзотические композиции для особенных моментов",
+    title: "Сезонные букеты",
+    description: "Свежесть и очарование каждого времени года",
     image:
       "https://images.unsplash.com/photo-1501004318641-b39e6451bec6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2073&q=80",
-    btnText: "Открыть для себя",
+    btnText: "Исследовать идеи",
   },
 ];
 
@@ -34,7 +34,6 @@ const HeroSlider = () => {
   const [isAnimating, setIsAnimating] = useState(false);
   const [imagesLoaded, setImagesLoaded] = useState<Record<number, boolean>>({});
 
-  // Предзагрузка изображений
   useEffect(() => {
     const loadImages = async () => {
       const promises = sliderItems.map((item) => {
@@ -117,14 +116,12 @@ const HeroSlider = () => {
         </div>
       ))}
 
-      {/* Fallback Image while loading */}
       {!Object.keys(imagesLoaded).length && (
         <div className="absolute inset-0 flex items-center justify-center bg-forest-green/20">
           <div className="animate-pulse w-16 h-16 rounded-full bg-gold/30" />
         </div>
       )}
 
-      {/* Navigation Arrows */}
       <button
         onClick={prevSlide}
         className="absolute left-4 top-1/2 -translate-y-1/2 z-20 h-10 w-10 flex items-center justify-center rounded-full bg-white/20 backdrop-blur-sm text-white hover:bg-white/30 transition-all duration-300"
@@ -140,7 +137,6 @@ const HeroSlider = () => {
         <ChevronRight size={20} />
       </button>
 
-      {/* Indicators */}
       <div className="absolute bottom-6 left-0 right-0 z-20 flex justify-center space-x-2">
         {sliderItems.map((_, index) => (
           <button
