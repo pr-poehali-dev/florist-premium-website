@@ -15,7 +15,7 @@ interface ProductCardProps {
 const products: ProductCardProps[] = [
   {
     id: 1,
-    name: "Любовные розы",
+    name: "Нежность пионов",
     price: 5900,
     image:
       "https://cdn.poehali.dev/files/f95d937b-6867-4772-a586-dc44f1a07415.png",
@@ -26,7 +26,7 @@ const products: ProductCardProps[] = [
     name: "Розовое облако",
     price: 4700,
     image:
-      "https://cdn.poehali.dev/files/c55bf421-fbdb-4da5-baff-939f01211404.png",
+      "https://cdn.poehali.dev/files/f95d937b-6867-4772-a586-dc44f1a07415.png",
     composition: "Пионы, розы, гипсофила",
   },
   {
@@ -42,7 +42,7 @@ const products: ProductCardProps[] = [
     name: "Весенний шепот",
     price: 4200,
     image:
-      "https://images.unsplash.com/photo-1525310072745-f49212b5ac6d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1965&q=80",
+      "https://cdn.poehali.dev/files/7dc81dd7-90d9-458d-9ed9-716fe35257b4.png",
     composition: "Тюльпаны, нарциссы, вербена",
   },
 ];
